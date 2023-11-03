@@ -1,0 +1,787 @@
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #EAE9E7;
+    background-image: url(../images/Bloom_Loading-screen_02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.loading>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* loading動畫 */
+.loadingControl {
+    width: 80%;
+    left: 10%;
+    top: 44%;
+}
+
+.loadingTitle {
+    /* transform: translateX(-50%); */
+    left: 47%;
+    top: 41.3%;
+    font-size: 1.5vw;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.progress-bar-fill {
+    height: 50px;
+    background-color: #B2B2B2;
+    border-radius: 25px;
+    transition: width 1s;
+}
+
+@media (max-width:768px) {
+
+    .progress-bar-fill {
+        height: 25px;
+        border-radius: 25px;
+    }
+
+    .loadingControl {
+        top: 46%;
+    }
+
+    .loadingTitle {
+        top: 46%;
+        left: 43%;
+    }
+
+    .progress-bar {
+        border-radius: 25px;
+    }
+}
+
+/* 收合 */
+.close_img {
+    width: 100%;
+    max-height: 0;
+    transition: max-height .8s cubic-bezier(1, 0.2, 0.2, 1);
+    overflow: hidden;
+}
+
+.show {
+    max-height: 5000px;
+}
+
+/* ------
+紅色按鈕
+------ */
+.thing3__btns__BG {
+    background-color: #F7F5F6;
+    border-radius: 15px;
+    filter: drop-shadow(0px 1px 2px rgb(0, 0, 0, 0.4));
+}
+
+
+.thing3__btns__item {
+    cursor: pointer;
+    /* padding-right: 50%; */
+    transition: all 0.3s;
+    right: 3%;
+    top: 49%;
+    transform: translateY(-50%);
+}
+
+.thing3__btns__item::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #B2B2B2;
+    border-radius: 50%;
+}
+
+.thing3__btns__item--active {
+    right: 55%;
+}
+
+.thing3__btns__item--active::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #ff0000;
+    border-radius: 50%;
+}
+
+
+@media (max-width:768px) {
+    .thing3__btns__item::after {
+        width: 10px;
+        height: 10px;
+    }
+
+}
+
+
+
+/* ------
+    swiper1
+------ */
+/* 更改按鈕圖案 */
+
+
+.swiperBtnR,
+.swiperBtnL {
+    width: 8%;
+    height: 8%;
+}
+
+.swiperBtnR {
+    right: -5%;
+}
+
+.swiperBtnL {
+    left: -5%;
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 568px) {
+
+    .swiperBtnR,
+    .swiperBtnL {
+        width: 10%;
+        height: 10%;
+        top: 65%;
+    }
+
+    .swiperBtnR {
+        right: -7%;
+    }
+
+    .swiperBtnL {
+        left: -7%;
+    }
+}
+
+.swiperBtnR:after {
+    content: "";
+    background-image: url(../images/R.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100%;
+}
+
+.swiperBtnL:after {
+    content: "";
+    background-image: url(../images/L.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* 文字區塊 收合 */
+.titleBG {
+    background-color: #EAE9E7;
+    width: 76%;
+    margin: 0 auto;
+    padding: 2.5% 0;
+    cursor: pointer;
+}
+
+.open {
+    position: absolute;
+    width: 7%;
+    right: 5%;
+    top: 35%;
+}
+
+.open--active {
+    top: auto;
+    bottom: 8%
+}
+
+.wrinkle-text {
+    font-size: 30px;
+    max-width: 50%;
+    /* 設定元素寬度 */
+    white-space: nowrap;
+    /* 避免文字換行 */
+    overflow: hidden;
+    /* 隱藏超出範圍的文字 */
+    text-overflow: ellipsis;
+    /* 使用省略號來表示被隱藏的文字 */
+    cursor: pointer;
+    /* 調整游標樣式為指標 */
+    /* border: 3px solid red; */
+    /* transition: all 0.5s; */
+    margin-left: 23%;
+    text-align: justify;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.text--open {
+    max-width: 72%;
+    white-space: normal;
+    overflow: visible;
+    /* 隱藏超出範圍的文字 */
+    text-overflow: clip;
+    /* 使用省略號來表示被隱藏的文字 */
+}
+
+.text--open2 {
+    max-width: 80%;
+    white-space: normal;
+    overflow: visible;
+    /* 隱藏超出範圍的文字 */
+    text-overflow: clip;
+    /* 使用省略號來表示被隱藏的文字 */
+    margin: 0 auto;
+}
+
+.brClose {
+    display: none;
+}
+
+.closeMark {
+    display: none;
+}
+
+.markClose {
+    display: none;
+}
+
+.markActive {
+    display: block;
+}
+
+@media (max-width:768px) {
+    .wrinkle-text {
+        font-size: 16px;
+    }
+
+    .open {
+        width: 10%;
+    }
+
+    .open--active {
+        bottom: 4%;
+    }
+
+}
+
+
+/* ---------
+    漢堡選單
+----------- */
+.navControl {
+    position: sticky;
+    top: -1px;
+    z-index: 49;
+}
+
+.logoControl {
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+nav {
+    background-color: #fff;
+    max-width: 1920px;
+    height: 90px;
+    margin: 0 auto;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    font-family: DFT_N5;
+    font-weight: lighter;
+}
+
+nav ul {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_logo {
+    width: 150px;
+    height: auto;
+    /* margin: 20px 0 0 52px; */
+    /* filter: drop-shadow(2px 2px 2px rgba(16, 16, 16, 0.659)); */
+    transition-property: all;
+    transition: ease-in-out;
+    transition-duration: .25s;
+    transform: scale(1);
+}
+
+.nav_logo:hover {
+    /* filter: drop-shadow(0px 0px 0px rgba(16, 16, 16, 0.658)); */
+    transform: scale(0.98);
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 3px;
+    /* margin: 35px 16px 0 17px;
+    display: inline-block; */
+}
+
+nav ul li a {
+    color: #101010;
+    text-decoration: none;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+nav ul li:last-child a {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 2.5px 15px;
+    border-radius: 19.5px;
+    transition: all 0.3s;
+}
+
+nav ul li:last-child a:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+nav ul #li_right {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 0% 7% 0% 0%; */
+}
+
+#li_right li {
+    margin: 0 1.5%;
+}
+
+@media (max-width:768px) {
+    #li_right li {
+        margin: 0;
+    }
+}
+
+
+/**/
+
+
+/*漢堡選單*/
+
+#hamburger {
+    display: none;
+    z-index: 99;
+    font-family: DFT_N5;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    line-height: 60px;
+    position: relative;
+    top: -1px;
+    z-index: 999;
+}
+
+header .nav_logo {
+    /* margin: 6px 0 0 20px; */
+    width: 100px;
+}
+
+#nav-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* float: right; */
+    top: 0;
+    right: 30px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#icon_bg {
+    /* background-color: #fff; */
+    height: 50px;
+    width: 50px;
+}
+
+#nav-icon span {
+    margin-left: 10px;
+    margin-top: 14px;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #101010;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon span:nth-child(2) {
+    top: 10px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon span:nth-child(3) {
+    top: 20px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+    left: 4px;
+    background-color: #101010;
+}
+
+#nav-icon.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 4px;
+    background-color: #101010;
+}
+
+.menu {
+    z-index: 1000;
+    font-size: 20px;
+    width: 100%;
+    background-color: #EAE9E7;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    /* margin-top: 50px; */
+    display: none;
+}
+
+/* @media (max-width:414px) {
+    .menu {
+        top: 140px;
+    }
+}
+
+@media (max-width:395px) {
+    .menu {
+        top:135px;
+    }
+}
+
+@media (max-width:375px) {
+    .menu {
+        top: 130px;
+    }
+} */
+
+.menu--activeOffer {
+    top: 0;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.menu ul li {
+    padding: 15px 0;
+    border-top: #101010 1px dashed;
+}
+
+.menu ul li a {
+    color: #101010;
+    text-decoration: none;
+    transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    display: block;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.menu ul li a:hover {
+    font-size: 1.2em;
+    transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
+    -webkit-transition: .3s;
+    color: #101010;
+}
+
+.menu ul li:last-child {
+    background-color: #ff0000;
+}
+
+.menu ul li:last-child a {
+    color: #fff;
+}
+
+/**/
+
+@media screen and (max-width: 860px) {
+    nav {
+        display: none;
+    }
+
+    #hamburger {
+        display: block;
+    }
+}
+
+
+/**/
+
+
+/* -----------
+    salePOPUp
+----------- */
+.popBG {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0, 0.7);
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.js-xmark {
+    cursor: pointer;
+    font-size: 3rem;
+    position: sticky;
+    text-align: end;
+    display: block;
+    top: 3%;
+    margin-right: 3%;
+    /* right: 8%; */
+    color: #000;
+}
+
+.popSaleContainer {
+    margin-top: -5%;
+}
+
+@media (max-width:768px) {
+    .popSaleContainer {
+        width: 90%;
+        margin: -9% auto 0 auto;
+    }
+
+    .js-xmark {
+        font-size: 2rem;
+        top: 1%;
+    }
+}
+
+
+
+/*-----------
+    POPUp
+-------------*/
+.popControl {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgb(0, 0, 0, 0.6);
+    transition: all 0.3s;
+}
+
+.popControl--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popContainer {
+    max-width: 1000px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.popVideo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.xmark {
+    position: absolute;
+    right: 6%;
+    top: 15%;
+    /* transform: translateY(-50%); */
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 2.5vw;
+}
+
+@media (max-width:768px) {
+    .popVideo {
+        width: 95%;
+        height: 35%;
+    }
+
+    .xmark {
+        top: 28%;
+        right: 3%;
+        font-size: 8vw;
+    }
+}
+
+/* 倒數計時 */
+
+.clock-container {
+    color: #ffffff;
+    background: #ff0000;
+    padding: 0.15em 0;
+    /* border-radius: 0.1em; */
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#timer {
+    border-radius: 1.5px;
+    font-weight: bold;
+    margin: .5 .5em;
+    padding: 0 .5em;
+    letter-spacing: 0.1em;
+    color: #f9f9f9;
+}
+
+.spBr {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .clock-container {
+        font-size: 2rem;
+    }
+
+    .spBr {
+        display: block;
+    }
+
+}
+
+@media (max-width:549px) {
+    .clock-container {
+        font-size: 1.35rem;
+    }
+}
+
+/* CTA */
+#cta {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 12%;
+    display: none;
+    z-index: 999;
+}
+
+@media (max-width:768px) {
+    #cta {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+
+}

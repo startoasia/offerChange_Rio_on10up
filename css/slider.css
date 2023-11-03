@@ -1,0 +1,130 @@
+/* 使用到的 */
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.imgChange {
+    width: 100%;
+    cursor: pointer;
+    /* filter: grayscale(1); */
+    opacity: 0.5;
+    scale: 0.8;
+    transition: all 0.3s;
+    /* border: 1px solid #000; */
+}
+
+.imgChange:hover {
+    scale: 1;
+    /* filter: grayscale(0); */
+    opacity: 1;
+}
+
+.active {
+    scale: 1;
+    /* filter: grayscale(0); */
+    opacity: 1;
+}
+
+.imgShow {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 100%;
+    /* height: 50%; */
+}
+
+
+/* 圖片顯示定位 */
+
+.imgShowControl_01 {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+}
+.imgShowControl_02 {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12%;
+}
+
+
+
+/* 圖片列表定位 */
+
+.imgShowItem_01 {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 82%;
+    justify-content: space-between;
+}
+.imgShowItem_02 {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 79%;
+    justify-content: space-between;
+}
+
+.sliderBox {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fingerControl {
+    width: 84%;
+    left: 55%;
+    transform: translateX(-50%);
+    bottom: -1%;
+    z-index: 1;
+    justify-content: space-around;
+}
+
+.fingerControl img {
+    width: 70%;
+}
+/* 
+.Box1 {
+    background-image: url(../images/A_btn01.png);
+}
+
+.Box1:hover {
+    background-image: url(../images/A_btn02.png);
+}
+
+.Box2 {
+    background-image: url(../images/B_btn01.png);
+}
+
+.Box2:hover {
+    background-image: url(../images/B_btn02.png);
+}
+
+.Box3 {
+    background-image: url(../images/C_btn01.png);
+}
+
+.Box3:hover {
+    background-image: url(../images/C_btn02.png);
+}
+
+.Box4 {
+    background-image: url(../images/D_btn01.png);
+}
+
+.Box4:hover {
+    background-image: url(../images/D_btn02.png);
+}
+
+.Box5 {
+    background-image: url(../images/E_btn01.png);
+}
+
+.Box5:hover {
+    background-image: url(../images/E_btn02.png);
+} */

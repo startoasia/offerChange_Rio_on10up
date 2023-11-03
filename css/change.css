@@ -1,0 +1,166 @@
+.js-check {
+    display: none;
+}
+
+.offer_active {
+    display: block;
+}
+/* -----------
+    sale
+----------- */
+.saleBtnControl {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 27%;
+    width: 55%;
+    display: flex;
+    border: 2px solid #FE0000;
+    border-radius: 50px;
+}
+
+.saleBtn {
+    width: 50%;
+    padding: 1.5% 2.5%;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-align: center;
+    color: #FE0000;
+}
+
+.saleClick {
+    cursor: pointer;
+    border-left: 2px solid #FE0000;
+    background-color: #FE0000;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.5s;
+}
+
+.saleClick:hover {
+    opacity: 0.6;
+}
+
+.saleClick::after {
+    content: "";
+    display: inline-block;
+    margin: 0 0 1.5% 4%;
+    border-style: solid;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #fff;
+    animation: moveArrow 0.5s infinite alternate ease-in-out;
+}
+/* -----------
+    change
+----------- */
+.changeBtnControl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 2.5%;
+
+}
+
+.changeBtn {
+    width: 50%;
+    border: 2px solid #FE0000;
+    padding: 1.5% 2.5%;
+    cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2.4rem;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-align: center;
+    color: #FE0000;
+}
+
+.changeBtn::after {
+    content: "";
+    display: inline-block;
+    margin: 0 0 1% 5%;
+    border-style: solid;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #FE0000;
+    color: #FE0000;
+}
+
+.changeBtn--active {
+    background-color: #FE0000;
+    color: #fff;
+    animation: active 1.5s infinite alternate ease-in-out;
+}
+
+.changeBtn--active::after {
+    border-color: transparent transparent transparent #fff;
+    animation: moveArrow 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes active {
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes moveArrowSP {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(2.5px);
+    }
+}
+
+@media (max-width:768px) {
+    .changeBtn {
+        border: 1px solid #FE0000;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .changeBtn::after {
+        margin: 0 0 1.5% 3%;
+        border-width: 4px 0 4px 8px;
+    }
+
+    .changeBtn--active::after {
+        animation: moveArrowSP 0.5s infinite alternate ease-in-out;
+    }
+
+    .saleBtnControl {
+        width: 70%;
+        border: 1px solid #FE0000;
+    }
+
+    .saleBtn {
+        padding: 1.5% 2.5%;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .saleClick::after {
+        border-width: 4px 0 4px 8px;
+        animation: moveArrowSP 0.5s infinite alternate ease-in-out;
+    }
+}
+
